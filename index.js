@@ -4,7 +4,6 @@ const generateHTML = require("./source/HTMLgenerator");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const Employee = require("./lib/Employee");
 
 // node modules
 const fs = require("fs");
@@ -73,6 +72,7 @@ const addManager = () => {
     ])
     .then((managerInput) => {
       const { name, id, email, officeNumber } = managerInput;
+      console.log(Manager);
       const manager = new Manager(name, id, email, officeNumber);
 
       teamArray.push(manager);
