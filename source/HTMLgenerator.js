@@ -56,8 +56,9 @@ const generateIntern = (intern) => {
 
 generateHTML = (data) => {
   pageArray = [];
+  console.log("DATA", data);
 
-  for (let i = 0; i < data.lenth; i++) {
+  for (let i = 0; i < data.length; i++) {
     const employee = data[i];
     const role = employee.getRole();
 
@@ -84,6 +85,7 @@ generateHTML = (data) => {
   //Joining the cards together
 
   const cards = pageArray.join("");
+  console.log("CARDS", cards);
 
   //
 
@@ -93,7 +95,7 @@ generateHTML = (data) => {
 
 //Generate HTML
 
-const generatepage = (cards) => {
+const generatePage = (cards) => {
   return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -116,7 +118,7 @@ const generatepage = (cards) => {
             <div class="container">
                 <div class="row justify-content-center" id="team-cards">
                     <!--Team Cards-->
-                    ${employeeCards}
+                    ${cards}
                 </div>
             </div>
         </main>
