@@ -18,10 +18,10 @@ node index.js
 
 ## Screenshot
 
-![Built application](10-OOP/Homework/Homework-10-Team-Profile/Assets/screenshot.png)
+![Built application](Assets/screenshot.png)
 
 ## Deployed Application
 
 Please click the following link:
 
-https://luisbonilla89.github.io/Portfolio-New/
+https://luisbonilla89.github.io/Homework-10-Team-Profile/
