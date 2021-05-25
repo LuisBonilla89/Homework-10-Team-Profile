@@ -19,7 +19,7 @@ const addManager = () => {
       {
         type: "input",
         name: "name",
-        message: "Who is the manager of this team?",
+        message: "What is the team manager's name?",
         validate: (nameInput) => {
           if (nameInput) {
             return true;
@@ -83,7 +83,7 @@ const addManager = () => {
 const addEmployee = () => {
   console.log(`
     =================
-    Adding employees to the team
+    Employed added to the team!!
     =================
     `);
 
@@ -92,13 +92,13 @@ const addEmployee = () => {
       {
         type: "list",
         name: "role",
-        message: "Please choose your employee's role",
+        message: "Please select the  employee's role",
         choices: ["Engineer", "Intern"],
       },
       {
         type: "input",
         name: "name",
-        message: "What's the name of the employee?",
+        message: "What is the employee's name?",
         validate: (nameInput) => {
           if (nameInput) {
             return true;
@@ -211,9 +211,7 @@ const writeFile = (data) => {
       return;
       // when the profile has been created
     } else {
-      console.log(
-        "Your team profile has been successfully created! Please check out the index.html"
-      );
+      console.log("Your team profile has been successfully generated!");
     }
   });
 };
@@ -224,7 +222,6 @@ addManager()
     return generateHTML(teamArray);
   })
   .then((pageHTML) => {
-    console.log(pageHTML);
     return writeFile(pageHTML);
   })
   .catch((err) => {
